@@ -49,6 +49,8 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           ),
           const Expanded(child: SizedBox()),
           InkWell(
+            overlayColor:
+                MaterialStateColor.resolveWith((states) => Colors.transparent),
             onTap: () {
               final themeState = context.findAncestorStateOfType<AppState>();
 

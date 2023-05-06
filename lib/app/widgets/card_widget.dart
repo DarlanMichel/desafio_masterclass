@@ -1,16 +1,20 @@
 import 'package:desafio_masterclass/app/app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CardWidget extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
+  final String? svg;
   final String title;
   final String description;
-  const CardWidget(
-      {super.key,
-      required this.icon,
-      required this.title,
-      required this.description});
+  const CardWidget({
+    super.key,
+    this.icon,
+    this.svg,
+    required this.title,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +23,7 @@ class CardWidget extends StatelessWidget {
     final isDark = themeState?.themeMode == ThemeMode.dark;
 
     return Container(
+      margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.only(
         top: 10,
         bottom: 21.5,
@@ -36,12 +41,24 @@ class CardWidget extends StatelessWidget {
               CircleAvatar(
                 backgroundColor: Theme.of(context).primaryColor,
                 radius: 21.5,
-                child: Icon(
-                  icon,
-                  color: isDark
-                      ? Theme.of(context).scaffoldBackgroundColor
-                      : Theme.of(context).cardColor,
-                ),
+                child: (svg ?? '').isNotEmpty
+                    ? SvgPicture.asset(
+                        svg ?? '',
+                        height: 33,
+                        width: 33,
+                        colorFilter: ColorFilter.mode(
+                          isDark
+                              ? Theme.of(context).scaffoldBackgroundColor
+                              : Theme.of(context).cardColor,
+                          BlendMode.srcIn,
+                        ),
+                      )
+                    : Icon(
+                        icon,
+                        color: isDark
+                            ? Theme.of(context).scaffoldBackgroundColor
+                            : Theme.of(context).cardColor,
+                      ),
               ),
               const SizedBox(width: 13),
               Expanded(
