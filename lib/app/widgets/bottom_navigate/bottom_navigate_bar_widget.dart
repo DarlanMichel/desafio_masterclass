@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigateBarWidget extends StatefulWidget {
-  const BottomNavigateBarWidget({super.key});
+  final int indexSelected;
+  const BottomNavigateBarWidget({super.key, required this.indexSelected});
 
   @override
   State<BottomNavigateBarWidget> createState() =>
@@ -12,8 +13,6 @@ class BottomNavigateBarWidget extends StatefulWidget {
 }
 
 class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
-  int indexSelected = 0;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,14 +23,10 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
         children: [
           BottomNavigateItem(
             index: 0,
-            indexSelected: indexSelected,
+            indexSelected: widget.indexSelected,
             label: 'Atividades',
             icon: FeatherIcons.target,
-            onTap: () {
-              setState(() {
-                indexSelected = 0;
-              });
-            },
+            onTap: () => Navigator.pushNamed(context, '/home'),
           ),
           Container(
             height: 46,
@@ -40,14 +35,10 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
           ),
           BottomNavigateItem(
             index: 1,
-            indexSelected: indexSelected,
+            indexSelected: widget.indexSelected,
             label: 'Repositórios',
             icon: FontAwesomeIcons.github,
-            onTap: () {
-              setState(() {
-                indexSelected = 1;
-              });
-            },
+            onTap: () => Navigator.pushNamed(context, '/repositories'),
           ),
           Container(
             height: 46,
@@ -56,14 +47,10 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
           ),
           BottomNavigateItem(
             index: 2,
-            indexSelected: indexSelected,
+            indexSelected: widget.indexSelected,
             label: 'Sobre o dev',
             icon: Icons.person,
-            onTap: () {
-              setState(() {
-                indexSelected = 2;
-              });
-            },
+            onTap: () => Navigator.pushNamed(context, '/about'),
           ),
         ],
       ),

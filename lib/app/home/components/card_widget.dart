@@ -8,12 +8,16 @@ class CardWidget extends StatelessWidget {
   final String? svg;
   final String title;
   final String description;
+  final Function() seeMore;
+  final int quantity;
   const CardWidget({
     super.key,
     this.icon,
     this.svg,
     required this.title,
     required this.description,
+    required this.seeMore,
+    required this.quantity,
   });
 
   @override
@@ -78,7 +82,7 @@ class CardWidget extends StatelessWidget {
                           ?.copyWith(color: Theme.of(context).hintColor),
                     ),
                     TextSpan(
-                      text: '3',
+                      text: quantity.toString(),
                       style: Theme.of(context).textTheme.displaySmall,
                     ),
                   ],
@@ -109,20 +113,25 @@ class CardWidget extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
-              Container(
-                height: 34.5,
-                width: 119,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.circular(23),
-                ),
-                child: Center(
-                  child: Text(
-                    'Ver mais',
-                    style: Theme.of(context)
-                        .textTheme
-                        .displaySmall
-                        ?.copyWith(color: const Color(0xFFEDF4F8)),
+              InkWell(
+                overlayColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.transparent),
+                onTap: seeMore,
+                child: Container(
+                  height: 34.5,
+                  width: 119,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(23),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Ver mais',
+                      style: Theme.of(context)
+                          .textTheme
+                          .displaySmall
+                          ?.copyWith(color: const Color(0xFFEDF4F8)),
+                    ),
                   ),
                 ),
               ),

@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
+  final String title;
+  final Function()? toBack;
   const AppBarWidget({
     super.key,
+    required this.title,
+    this.toBack,
   });
 
   @override
@@ -27,18 +31,29 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            Assets.logo,
-            height: 48,
-            width: 48,
-          ),
-          const SizedBox(width: 4),
+          widget.toBack == null
+              ? Image.asset(
+                  Assets.logo,
+                  height: 48,
+                  width: 48,
+                )
+              : InkWell(
+                  overlayColor: MaterialStateColor.resolveWith(
+                      (states) => Colors.transparent),
+                  onTap: widget.toBack,
+                  child: Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    size: 23,
+                    color: Theme.of(context).highlightColor,
+                  ),
+                ),
+          SizedBox(width: widget.toBack == null ? 4 : 19),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Atividades',
+                widget.title,
                 style: Theme.of(context).textTheme.displayLarge,
               ),
               Text(
