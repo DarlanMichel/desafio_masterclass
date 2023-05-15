@@ -1,3 +1,6 @@
+import 'package:desafio_masterclass/app/about/about_page.dart';
+import 'package:desafio_masterclass/app/home/home_page.dart';
+import 'package:desafio_masterclass/app/repositories/repositories_page.dart';
 import 'package:desafio_masterclass/app/widgets/bottom_navigate/bottom_navigate_item.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +29,15 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
             indexSelected: widget.indexSelected,
             label: 'Atividades',
             icon: FeatherIcons.target,
-            onTap: () => Navigator.pushNamed(context, '/home'),
+            onTap: () => Navigator.pushAndRemoveUntil(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (_, __, ___) => const HomePage(),
+                transitionDuration: Duration.zero,
+                reverseTransitionDuration: Duration.zero,
+              ),
+              ModalRoute.withName('/'),
+            ),
           ),
           Container(
             height: 46,
@@ -38,7 +49,15 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
             indexSelected: widget.indexSelected,
             label: 'Repositórios',
             icon: FontAwesomeIcons.github,
-            onTap: () => Navigator.pushNamed(context, '/repositories'),
+            onTap: () => Navigator.pushAndRemoveUntil(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (_, __, ___) => const RepositoriesPage(),
+                transitionDuration: Duration.zero,
+                reverseTransitionDuration: Duration.zero,
+              ),
+              ModalRoute.withName('/'),
+            ),
           ),
           Container(
             height: 46,
@@ -50,7 +69,15 @@ class _BottomNavigateBarWidgetState extends State<BottomNavigateBarWidget> {
             indexSelected: widget.indexSelected,
             label: 'Sobre o dev',
             icon: Icons.person,
-            onTap: () => Navigator.pushNamed(context, '/about'),
+            onTap: () => Navigator.pushAndRemoveUntil(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (_, __, ___) => const AboutPage(),
+                transitionDuration: Duration.zero,
+                reverseTransitionDuration: Duration.zero,
+              ),
+              ModalRoute.withName('/'),
+            ),
           ),
         ],
       ),
