@@ -1,4 +1,4 @@
-import 'package:desafio_masterclass/app/animations/components/animations_tile.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/animations/components/animations_tile.dart';
 import 'package:desafio_masterclass/app/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 

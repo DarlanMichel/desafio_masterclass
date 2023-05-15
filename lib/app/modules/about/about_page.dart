@@ -1,6 +1,6 @@
-import 'package:desafio_masterclass/app/about/components/about_card_widget.dart';
-import 'package:desafio_masterclass/app/about/components/about_favorite_card_widget.dart';
-import 'package:desafio_masterclass/app/about/components/about_habilities_card_widget.dart';
+import 'package:desafio_masterclass/app/modules/about/components/about_card_widget.dart';
+import 'package:desafio_masterclass/app/modules/about/components/about_favorite_card_widget.dart';
+import 'package:desafio_masterclass/app/modules/about/components/about_habilities_card_widget.dart';
 import 'package:desafio_masterclass/app/utilities/assets.dart';
 import 'package:desafio_masterclass/app/widgets/app_bar_widget.dart';
 import 'package:desafio_masterclass/app/widgets/bottom_navigate/bottom_navigate_bar_widget.dart';

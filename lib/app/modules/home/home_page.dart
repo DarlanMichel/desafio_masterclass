@@ -1,7 +1,7 @@
 import 'package:desafio_masterclass/app/utilities/assets.dart';
 import 'package:desafio_masterclass/app/widgets/app_bar_widget.dart';
 import 'package:desafio_masterclass/app/widgets/bottom_navigate/bottom_navigate_bar_widget.dart';
-import 'package:desafio_masterclass/app/home/components/card_widget.dart';
+import 'package:desafio_masterclass/app/modules/home/components/card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
               title: 'Leitura de Mockup',
               description: 'Aplicação da técnica de leitura de mockup, '
                   'contendo 2 exercícios',
-              seeMore: () {},
+              seeMore: () => Navigator.pushNamed(context, '/mockups'),
             ),
             CardWidget(
               svg: Assets.iconToys,

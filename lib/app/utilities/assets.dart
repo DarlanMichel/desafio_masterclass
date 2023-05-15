@@ -5,4 +5,5 @@ class Assets {
   static const photo = 'assets/photo.jpeg';
   static const flutter = 'assets/simple_flutter.svg';
   static const dart = 'assets/dart_language.svg';
+  static const google = 'assets/google.png';
 }

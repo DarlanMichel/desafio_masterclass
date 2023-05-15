@@ -1,6 +1,6 @@
-import 'package:desafio_masterclass/app/about/about_page.dart';
-import 'package:desafio_masterclass/app/home/home_page.dart';
-import 'package:desafio_masterclass/app/repositories/repositories_page.dart';
+import 'package:desafio_masterclass/app/modules/about/about_page.dart';
+import 'package:desafio_masterclass/app/modules/home/home_page.dart';
+import 'package:desafio_masterclass/app/modules/repositories/repositories_page.dart';
 import 'package:desafio_masterclass/app/widgets/bottom_navigate/bottom_navigate_item.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';

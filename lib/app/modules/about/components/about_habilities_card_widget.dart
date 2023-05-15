@@ -1,4 +1,4 @@
-import 'package:desafio_masterclass/app/about/components/about_habilities_tile_widget.dart';
+import 'package:desafio_masterclass/app/modules/about/components/about_habilities_tile_widget.dart';
 import 'package:flutter/material.dart';
 
 class AboutHabilitiesCardWidget extends StatelessWidget {

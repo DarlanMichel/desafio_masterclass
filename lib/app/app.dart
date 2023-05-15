@@ -1,8 +1,10 @@
-import 'package:desafio_masterclass/app/about/about_page.dart';
-import 'package:desafio_masterclass/app/animations/animations_page.dart';
-import 'package:desafio_masterclass/app/home/home_page.dart';
-import 'package:desafio_masterclass/app/repositories/repositories_page.dart';
-import 'package:desafio_masterclass/app/splash/splash_screen.dart';
+import 'package:desafio_masterclass/app/modules/about/about_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/animations/animations_page.dart';
+import 'package:desafio_masterclass/app/modules/home/home_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/mockups/mockups_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/mockups/pages/mockup_1_page.dart';
+import 'package:desafio_masterclass/app/modules/repositories/repositories_page.dart';
+import 'package:desafio_masterclass/app/modules/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -112,6 +114,8 @@ class AppState extends State<App> {
         '/': (context) => const SplashScreen(),
         '/home': (context) => const HomePage(),
         '/animations': (context) => const AnimationsPage(),
+        '/mockups': (context) => const MockupsPage(),
+        '/mockups/1': (context) => const Mockup1Page(),
         '/repositories': (context) => const RepositoriesPage(),
         '/about': (context) => const AboutPage(),
       },

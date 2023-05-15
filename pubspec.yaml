@@ -35,5 +35,6 @@ flutter:
     - assets/photo.jpeg
     - assets/simple_flutter.svg
     - assets/dart_language.svg
+    - assets/google.png
 
   
