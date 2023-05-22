@@ -3,6 +3,7 @@ import 'package:desafio_masterclass/app/modules/home/pages/animations/animations
 import 'package:desafio_masterclass/app/modules/home/home_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/mockups/mockups_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/mockups/pages/mockup_1_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/mockups/pages/mockup_2_page.dart';
 import 'package:desafio_masterclass/app/modules/repositories/repositories_page.dart';
 import 'package:desafio_masterclass/app/modules/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -116,6 +117,7 @@ class AppState extends State<App> {
         '/animations': (context) => const AnimationsPage(),
         '/mockups': (context) => const MockupsPage(),
         '/mockups/1': (context) => const Mockup1Page(),
+        '/mockups/2': (context) => const Mockup2Page(),
         '/repositories': (context) => const RepositoriesPage(),
         '/about': (context) => const AboutPage(),
       },

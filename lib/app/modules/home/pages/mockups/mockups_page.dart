@@ -28,7 +28,7 @@ class MockupsPage extends StatelessWidget {
             MockupsTile(
               index: 2,
               title: 'Tinder',
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, '/mockups/2'),
             ),
           ],
         ),
