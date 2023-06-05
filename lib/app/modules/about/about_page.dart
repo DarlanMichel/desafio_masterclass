@@ -39,7 +39,7 @@ class AboutPage extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               SizedBox(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.sizeOf(context).width,
                 height: 100,
                 child: ListView(
                   scrollDirection: Axis.horizontal,

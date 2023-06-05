@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:desafio_masterclass/app/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,13 +14,12 @@ class Mockup2Page extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.sizeOf(context).height,
+          width: MediaQuery.sizeOf(context).width,
           color: Colors.orange,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              
               const SizedBox(height: 80),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),

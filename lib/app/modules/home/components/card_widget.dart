@@ -90,9 +90,9 @@ class CardWidget extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 37),
+          const SizedBox(height: 33),
           SizedBox(
-            height: 41,
+            height: 50,
             child: Text(
               description,
               style: Theme.of(context).textTheme.bodyLarge,

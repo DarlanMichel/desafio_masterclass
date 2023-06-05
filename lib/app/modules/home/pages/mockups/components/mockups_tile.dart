@@ -13,6 +13,7 @@ class MockupsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      overlayColor: MaterialStateColor.resolveWith((states) => Colors.transparent),
       onTap: onTap,
       child: Container(
         margin: const EdgeInsets.only(bottom: 8),

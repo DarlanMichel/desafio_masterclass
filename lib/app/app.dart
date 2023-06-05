@@ -1,6 +1,8 @@
 import 'package:desafio_masterclass/app/modules/about/about_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/animations/animations_page.dart';
 import 'package:desafio_masterclass/app/modules/home/home_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/animations/pages/animation_1_page.dart';
+import 'package:desafio_masterclass/app/modules/home/pages/animations/pages/animation_2_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/mockups/mockups_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/mockups/pages/mockup_1_page.dart';
 import 'package:desafio_masterclass/app/modules/home/pages/mockups/pages/mockup_2_page.dart';
@@ -115,6 +117,8 @@ class AppState extends State<App> {
         '/': (context) => const SplashScreen(),
         '/home': (context) => const HomePage(),
         '/animations': (context) => const AnimationsPage(),
+        '/animation/1': (context) => const Animation1Page(),
+        '/animation/2': (context) => const Animation2Page(),
         '/mockups': (context) => const MockupsPage(),
         '/mockups/1': (context) => const Mockup1Page(),
         '/mockups/2': (context) => const Mockup2Page(),

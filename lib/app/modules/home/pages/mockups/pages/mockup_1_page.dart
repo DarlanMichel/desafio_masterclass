@@ -14,8 +14,8 @@ class Mockup1Page extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.sizeOf(context).height,
+          width: MediaQuery.sizeOf(context).width,
           color: Colors.black,
           child: Column(
             children: [
@@ -130,7 +130,7 @@ class Mockup1Page extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 48),
+              const SizedBox(height: 47),
               RichText(
                 text: const TextSpan(
                   children: [

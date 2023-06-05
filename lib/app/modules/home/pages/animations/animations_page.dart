@@ -18,11 +18,19 @@ class AnimationsPage extends StatelessWidget {
           right: 14,
           top: 20,
         ),
-        child: ListView.builder(
-          itemCount: 4,
-          itemBuilder: (context, i) {
-            return AnimationsTile(index: i);
-          },
+        child: Column(
+          children: [
+            AnimationsTile(
+              index: 1,
+              onTap: () => Navigator.pushNamed(context, '/animation/1'),
+              title: 'Botão Flutuante',
+            ),
+            AnimationsTile(
+              index: 2,
+              onTap: () => Navigator.pushNamed(context, '/animation/2'),
+              title: 'My Expansion Tile',
+            ),
+          ],
         ),
       ),
     );

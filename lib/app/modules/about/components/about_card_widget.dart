@@ -41,7 +41,7 @@ class AboutCardWidget extends StatelessWidget {
           ),
           const SizedBox(height: 13),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 23),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Text(
               'Sou um desenvolvedor mobile, focado no Flutter e disposto a'
               ' aprender cada vez mais. Gosto de desafios que me façam'
